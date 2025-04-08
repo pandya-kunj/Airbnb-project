@@ -13,7 +13,7 @@ const Instructor = () => {
           <h1>Muhammad Zeeshan Khan</h1>
           <h4>Your Instructor</h4>
           <p>
-            Hello! I'm Muhammad Zeeshan Khan, a passionate MERN stack developer
+            Hello! I'm kunj pandya, a passionate MERN stack developer
             with a love for teaching and building scalable, robust applications.
             With years of experience in JavaScript, React, Node.js, Express, and
             MongoDB, I am dedicated to helping developers learn and grow their
