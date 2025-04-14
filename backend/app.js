@@ -10,6 +10,7 @@ import { connection } from "./database/dbConnection.js";
 import { errorMiddleware } from "./middlewares/error.js";
 import userRouter from "./routes/userRouter.js";
 import {removeUnverifiedAccounts} from "./automation/removeUnverifiedAccounts.js"
+import propertyRoutes from "./routes/propertyRoutes.js";
 
 export const app = express();
 
@@ -27,6 +28,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
 app.use("/api/v1/user", userRouter);
+
+app.use("/api/properties", propertyRoutes);
 
 console.log("Twilio SID:", process.env.TWILIO_SID);
 
