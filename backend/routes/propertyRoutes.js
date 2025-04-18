@@ -18,6 +18,9 @@ router.get("/:id", getPropertyById);
 router.put("/update/:id", isAuthenticated, updateProperty);
 
 
+
+
+
 router.delete("/delete/:id", isAuthenticated, deleteProperty);
 
 

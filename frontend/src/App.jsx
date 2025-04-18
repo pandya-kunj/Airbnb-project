@@ -1,8 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Auth from "./pages/Auth";
+import PropertyList from "./pages/PropertyList";
+import PropertyDetails from "./pages/PropertyDetails";
+import Auth from "./pages/Auth.jsx";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import { ToastContainer } from "react-toastify";
@@ -10,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { Context } from "./main";
 import OtpVerification from "./pages/OtpVerification";
+import Navbar from "../src/components/NavBar.jsx"; 
 
 const App = () => {
   const { setIsAuthenticated, setUser } = useContext(Context);
@@ -33,15 +35,19 @@ const App = () => {
   return (
     <>
       <Router>
+        <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          
+          
+       
           <Route path="/auth" element={<Auth />} />
-          <Route
-            path="/otp-verification/:email/:phone"
-            element={<OtpVerification />}
-          />
+          <Route path="/" element={<PropertyList />} />
+
+          <Route path="/otp-verification/:email/:phone" element={<OtpVerification />} />
           <Route path="/password/forgot" element={<ForgotPassword />} />
           <Route path="/password/reset/:token" element={<ResetPassword />} />
+
+          <Route path="/properties/:id" element={<PropertyDetails />} />
         </Routes>
         <ToastContainer theme="colored" />
       </Router>

@@ -1,0 +1,14 @@
+.property-list {
+    padding: 20px;
+  }
+  
+  .property-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
